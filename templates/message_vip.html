@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>后台</title>
+</head>
+<body>
+<form action="/message_vip2" method="post">
+    要删除哪条？<br>
+    <input type="number" name="del">
+</form>
+
+<section>
+        <table class="table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>昵称</td>
+            <td>留言</td>
+        </tr>
+
+        {% for i in range(l) %}
+            <tr>
+            <td>{{ id[i] }}</td>
+            <td>{{ name[i] }}</td>
+            <td>{{ message[i] }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+    </section>
+</body>
+</html>
